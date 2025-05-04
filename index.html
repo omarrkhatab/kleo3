@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Do You Love Me?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+      background-color: #fff0f5;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #ff69b4;
+    }
+    button {
+      padding: 10px 25px;
+      font-size: 1.2em;
+      margin: 20px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+      transition: 0.3s ease;
+    }
+    #yesBtn {
+      background-color: #ff69b4;
+      color: white;
+    }
+    #noBtn {
+      background-color: #d3d3d3;
+    }
+    .move {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Do you love me? 💖</h1>
+  <button id="yesBtn" onclick="location.href='love.html'">Yes</button>
+  <button id="noBtn">No</button>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 50));
+      noBtn.style.position = "absolute";
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+  </script>
+</body>
+</html>
